@@ -1,3 +1,8 @@
 remote_theme: pages-themes/cayman@v0.2.0
 title: MCB Advisor
-description: Financial Advisory & Strategic Intelligence
+description: "Advising in Corporate Finance issues to your company. Valuations, Investment Projects and Financial analysis. Restructuring and Due Diligence"
+subtitle: "Advising in Corporate Finance issues to your company. Valuations, Investment Projects and Financial analysis. Restructuring and Due Diligence"
+url: "https://maritothecrow.github.io"
+# Homepage profile photo — swap this path to point at your headshot file in the site root (not Logo.png). Example: "/profile-photo.jpg"
+profile_image: "/Fondo 1.jpg"
+contact_form_email: "mcbadvisor@gmail.com"

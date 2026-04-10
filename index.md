@@ -1,6 +1,7 @@
 ---
 layout: default
-title: MCB Advisor | Estrategia y Finanzas
+title: MCB Advisor | Home
+home: true
 ---
 
-Bienvenido a MCB Advisor. Seleccioná un servicio del menú para comenzar.
+{% include home-sections.html %}

@@ -1,57 +1,63 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  {% assign meta_title = page.title | default: site.title %}
+  {% assign meta_desc = page.description | default: site.subtitle | default: site.description %}
+  <title>{{ meta_title }}</title>
+  <meta name="description" content="{{ meta_desc | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ meta_title | escape }}">
+  <meta property="og:description" content="{{ meta_desc | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="{{ '/Logo.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1a1b1f">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
 
- <!-- BARRA SUPERIOR OSCURA -->
 <div class="top-bar">
   CORPORATE FINANCE &nbsp;|&nbsp; VALUATIONS &nbsp;|&nbsp; CAPITAL MARKETS
   <div class="top-bar-actions">
-    <a href="/" class="btn-home">Home</a>
-    <a href="/subscribe" class="btn-subscribe">Subscribe</a>
-    <a href="/admin" class="btn-signin">Sign In</a>
+    <a href="{{ '/' | relative_url }}" class="btn-home">Home</a>
+    <a href="{{ '/subscribe' | relative_url }}" class="btn-subscribe">Subscribe</a>
+    <a href="{{ '/admin' | relative_url }}" class="btn-signin">Sign In</a>
   </div>
 </div>
-  
-<!-- HEADER -->
+
 <header class="site-header">
   <div class="header-inner">
     <div class="title-logo-wrap">
-      <img src="/Logo.png" alt="MCB Advisor Logo" class="logo">
+      <img src="{{ '/Logo.png' | relative_url }}" alt="MCB Advisor Logo" class="logo">
       <h1 class="site-title">MCB Advisor</h1>
     </div>
-    <p class="site-subtitle">Financial Advisory & Strategic Intelligence</p>
+    <p class="site-subtitle">{{ site.subtitle }}</p>
   </div>
 </header>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="/ma">M&A</a></li>
-      <li><a href="/valuations">Valuations & Capital Markets</a></li>
-      <li><a href="/corporate">Corporate Finance</a></li>
-      <li><a href="/operative">Operative Finance</a></li>
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/about#contact">Contact</a></li>
-      <li><a href="/documents">Reports & Downloads</a></li>
-    </ul>
-  </nav>
+<nav class="navbar" aria-label="Primary">
+  <ul>
+    {% for item in site.data.nav %}
+    {% assign nav_parts = item.path | split: '#' %}
+    <li>
+      <a href="{{ nav_parts[0] | relative_url }}{% if nav_parts.size > 1 %}#{{ nav_parts[1] }}{% endif %}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
 
-  <!-- CONTENIDO -->
-  <main class="main-content">
-    {{ content }}
-  </main>
+<main class="main-content{% if page.home %} main-content--home{% endif %}">
+  {{ content }}
+</main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>&copy; 2025 MCB Advisor — Posadas, Misiones</p>
-    <p>"In God we trust, all others must bring data."</p>
-  </footer>
+<footer class="site-footer">
+  <p>&copy; 2026 MCB Advisor — Posadas, Misiones, Argentina</p>
+  <p>"In God we trust, all others must bring data."</p>
+</footer>
 
 </body>
 </html>
