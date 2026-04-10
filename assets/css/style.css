@@ -1,15 +1,13 @@
 /* =====================
-   RESET & BASE (Cronista-style scale: 15px body, max 32px titles except .site-title)
+   RESET & BASE
 ===================== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.5;
   background-color: #ecdad5;
   color: #333;
@@ -23,7 +21,7 @@ body {
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 10px 20px;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   display: flex;
@@ -45,7 +43,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 6px 12px;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 4px;
@@ -57,7 +55,7 @@ body {
   color: white;
   padding: 6px 12px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -65,7 +63,7 @@ body {
 .btn-signin {
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* =====================
@@ -100,7 +98,6 @@ body {
   left: -64px;
 }
 
-/* Exception: main brand wordmark only */
 .site-title {
   font-size: 102px;
   font-weight: 700;
@@ -112,7 +109,7 @@ body {
 .site-subtitle {
   font-family: Georgia, 'Times New Roman', serif;
   color: rgb(192, 25, 28);
-  font-size: min(1.15rem, 20px);
+  font-size: 20px;
   line-height: 1.45;
   margin-top: 14px;
   text-align: center;
@@ -147,7 +144,7 @@ body {
   padding: 12px 0;
   text-decoration: none;
   color: rgb(80, 4, 4);
-  font-size: 13px;
+  font-size: 17px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: Arial, sans-serif;
@@ -161,7 +158,7 @@ body {
 }
 
 /* =====================
-   MAIN (inner pages — caps)
+   MAIN (inner pages)
 ===================== */
 .main-content {
   max-width: 1200px;
@@ -184,7 +181,7 @@ body {
 }
 
 .main-content h2 {
-  font-size: min(28px, 32px);
+  font-size: 36px;
   margin: 24px 0 12px;
   border-bottom: 1px solid rgb(236, 218, 213);
   padding-bottom: 8px;
@@ -192,13 +189,13 @@ body {
 }
 
 .main-content h3 {
-  font-size: min(22px, 28px);
+  font-size: 29px;
   text-align: center;
   margin: 16px 0 10px;
 }
 
 .main-content p {
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   line-height: 1.5;
 }
@@ -209,14 +206,16 @@ body {
 .main-content ul {
   padding-left: 20px;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* =====================
-   HOME — section shells (Cronista-style width + rhythm)
+   HOME — section shells
 ===================== */
+
+/* ← SEPARADORES ELIMINADOS: margin-bottom: 0 */
 .home-section {
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .home-section:last-of-type {
@@ -241,7 +240,7 @@ body {
 
 /* ----- Profile ----- */
 .home-section--about {
-  background-color: #ecdad5;
+  background-color: #f9ecec;
 }
 
 .home-profile--row {
@@ -252,10 +251,9 @@ body {
 }
 
 .home-profile__photo {
-  width: 100%;
-  max-width: 180px;
-  height: 180px;
-  object-fit: cover;
+  width: 280px;
+  height: auto;
+  object-fit: contain;
   object-position: top center;
   border-radius: 8px;
   flex-shrink: 0;
@@ -269,7 +267,7 @@ body {
 
 .home-profile__name {
   font-family: Arial, sans-serif;
-  font-size: 22px;
+  font-size: 29px;
   font-weight: 700;
   color: #500404;
   line-height: 1.25;
@@ -278,16 +276,17 @@ body {
 }
 
 .home-profile__desc {
-  font-size: 15px;
+  font-size: 20px;
   color: #333;
   line-height: 1.5;
   margin: 0 0 12px;
   text-align: left;
 }
 
+/* LinkedIn + About Us → 20% larger (14px × 1.2 = 17px) */
 .home-profile__links {
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   margin: 0;
   text-align: left;
 }
@@ -305,14 +304,14 @@ body {
   color: #999;
 }
 
-/* ----- Services (4 columns, 23% + 1% gap) ----- */
+/* ----- Services ----- */
 .home-section--services {
   background-color: #f9ecec;
 }
 
 .home-services__heading {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 700;
   color: #500404;
   text-align: center;
@@ -328,7 +327,6 @@ body {
   align-items: stretch;
 }
 
-/* Four equal columns: 1% gap × 3 + four flexible slots = 100% */
 .service-card--equal {
   display: flex;
   flex-direction: column;
@@ -381,7 +379,7 @@ body {
 
 .service-card__title {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 700;
   color: #c10707;
   line-height: 1.3;
@@ -395,7 +393,7 @@ body {
 
 .service-card__desc {
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   color: #444;
   line-height: 1.5;
   text-align: left;
@@ -405,7 +403,7 @@ body {
 
 .service-card__cta {
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 600;
   color: #c10707;
   margin-top: 10px;
@@ -418,15 +416,15 @@ body {
   color: #500404;
 }
 
-/* ----- Valuations + Contact blocks ----- */
+/* ----- Valuations + Contact ----- */
 .home-section--valuations-cta,
 .home-section--contact {
-  background-color: #ecdad5;
+  background-color: #f9ecec;
 }
 
 .home-block__title {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: min(28px, 32px);
+  font-size: 36px;
   font-weight: 700;
   color: #500404;
   margin: 0 0 12px;
@@ -435,22 +433,20 @@ body {
 }
 
 .home-block__text {
-  font-size: 15px;
+  font-size: 20px;
   color: #333;
   line-height: 1.5;
   margin: 0 0 16px;
   text-align: left;
 }
 
-.home-block__text a {
-  color: #c10707;
-}
+.home-block__text a { color: #c10707; }
 
 .home-cta-button {
   display: inline-block;
   font-family: Arial, sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px 22px;
   background-color: #c10707;
   color: #fff !important;
@@ -466,9 +462,7 @@ body {
   color: #fff !important;
 }
 
-.home-cta-button--submit {
-  margin-top: 12px;
-}
+.home-cta-button--submit { margin-top: 12px; }
 
 .contact-form {
   display: flex;
@@ -480,7 +474,7 @@ body {
 .contact-form__label {
   font-family: Arial, sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 17px;
   color: #500404;
   margin-top: 8px;
 }
@@ -488,7 +482,7 @@ body {
 .contact-form__input,
 .contact-form__textarea {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   padding: 10px 12px;
   border: 1px solid rgba(80, 4, 4, 0.2);
   border-radius: 4px;
@@ -510,19 +504,14 @@ body {
   color: rgb(200, 200, 200);
   text-align: center;
   padding: 28px 20px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   margin-top: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.site-footer a {
-  color: rgb(220, 200, 200);
-}
-
-.site-footer a:hover {
-  color: #fff;
-}
+.site-footer a { color: rgb(220, 200, 200); }
+.site-footer a:hover { color: #fff; }
 
 /* =====================
    RESPONSIVE
@@ -532,7 +521,6 @@ body {
     flex-wrap: wrap;
     gap: 12px;
   }
-
   .service-card--equal {
     flex: 0 0 calc(50% - 6px);
     max-width: calc(50% - 6px);
@@ -541,48 +529,30 @@ body {
 
 @media (max-width: 767px) {
   .site-title { font-size: 102px; }
-  .site-subtitle { font-size: 14px; }
+  .site-subtitle { font-size: 16px; }
   .header-inner { flex-direction: column; gap: 12px; }
   .navbar ul { gap: 8px; justify-content: center; }
-  .navbar ul li a { font-size: 12px; padding: 8px 0; }
+  .navbar ul li a { font-size: 14px; padding: 8px 0; }
   .main-content { padding: 40px 20px; }
   .top-bar {
     flex-direction: column;
     gap: 8px;
-    font-size: 11px;
+    font-size: 13px;
     padding: 10px 12px;
   }
   .top-bar-actions { margin-left: 0; flex-wrap: wrap; justify-content: center; }
-  .btn-home,
-  .btn-subscribe { font-size: 11px; padding: 5px 10px; }
-  .btn-signin { font-size: 11px; }
+  .btn-home, .btn-subscribe { font-size: 13px; padding: 5px 10px; }
+  .btn-signin { font-size: 13px; }
   .logo { position: static; width: 44px; height: 44px; }
-  .site-footer { font-size: 13px; }
+  .site-footer { font-size: 15px; }
   .home-section__shell,
-  .home-section__shell--profile {
-    padding: 40px 20px;
-  }
-  .home-section__shell--profile {
-    padding: 32px 20px;
-  }
-  .home-profile--row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .home-profile__body {
-    text-align: center;
-  }
+  .home-section__shell--profile { padding: 40px 20px; }
+  .home-profile--row { flex-direction: column; align-items: center; text-align: center; }
+  .home-profile__photo { width: 200px; }
+  .home-profile__body,
   .home-profile__name,
   .home-profile__desc,
-  .home-profile__links {
-    text-align: center;
-  }
-  .home-services__heading {
-    font-size: 26px;
-  }
-  .service-card--equal {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+  .home-profile__links { text-align: center; }
+  .home-services__heading { font-size: 32px; }
+  .service-card--equal { flex: 0 0 100%; max-width: 100%; }
 }
