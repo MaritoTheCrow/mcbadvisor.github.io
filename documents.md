@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Documents & Reports
+title: Documentos y Reportes
 ---
 
-# 📂 Consulting archive
-*Technical reports and valuation models available for public download.*
-
----
-
-### 📈 Capital markets (Merval)
-* **Agrometal analysis 2025**: [Download PDF](assets/pdf/agro_2025.pdf)
-* **Aluar valuation**: [Download PDF](assets/pdf/aluar_valuation.pdf)
+# 📂 Archivo de Consultoría
+*Informes técnicos y modelos de valuación disponibles para descarga pública.*
 
 ---
 
-### 📑 Corporate finance
-* **Capital structure**: [Download PDF](assets/pdf/cap_structure.pdf)
-* **Cash flow template (demo)**: [Download PDF](assets/pdf/cashflow_demo.pdf)
+### 📈 Mercado de Capitales (Merval)
+* **Análisis Agrometal 2025**: [Descargar PDF](assets/pdf/agro_2025.pdf)
+* **Valuación Aluar**: [Descargar PDF](assets/pdf/aluar_valuation.pdf)
 
 ---
-[⬅️ Back to Home](index)
+
+### 📑 Finanzas Corporativas
+* **Estructura de Capital**: [Descargar PDF](assets/pdf/cap_structure.pdf)
+* **Plantilla de Cash Flow (Demo)**: [Descargar PDF](assets/pdf/cashflow_demo.pdf)
+
+---
+[⬅️ Volver al Inicio](index)
