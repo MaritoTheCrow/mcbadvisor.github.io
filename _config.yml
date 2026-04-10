@@ -3,6 +3,6 @@ title: MCB Advisor
 description: "Advising in Corporate Finance issues to your company. Valuations, Investment Projects and Financial analysis. Restructuring and Due Diligence"
 subtitle: "Advising in Corporate Finance issues to your company. Valuations, Investment Projects and Financial analysis. Restructuring and Due Diligence"
 url: "https://maritothecrow.github.io"
-# Homepage profile photo — swap this path to point at your headshot file in the site root (not Logo.png). Example: "/profile-photo.jpg"
-profile_image: "/Fondo 1.jpg"
+# Headshot for profile carousel (slide 1) + Investment Projects card only. Not Logo.png. Not handshake photos (e.g. avoid Fondo 1.jpg if that is a handshake scene). Change path if you add e.g. /portrait.jpg
+profile_image: "/Gemini_Generated 1.png"
 contact_form_email: "mcbadvisor@gmail.com"

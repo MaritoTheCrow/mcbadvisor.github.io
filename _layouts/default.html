@@ -59,5 +59,22 @@
   <p>"In God we trust, all others must bring data."</p>
 </footer>
 
+{% if page.home %}
+<script>
+(function () {
+  var root = document.querySelector('.home-profile__carousel');
+  if (!root) return;
+  var slides = root.querySelectorAll('.home-profile__slide');
+  if (!slides.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var i = 0;
+  setInterval(function () {
+    slides[i].classList.remove('is-active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('is-active');
+  }, 4000);
+})();
+</script>
+{% endif %}
+
 </body>
 </html>

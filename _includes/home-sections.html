@@ -1,10 +1,17 @@
-{% comment %} Homepage sections — edit copy here; service cards pull from _data/home_services.yml {% endcomment %}
+{% comment %} Homepage sections — service cards: _data/home_services.yml {% endcomment %}
+{% assign profile_url = site.profile_image | relative_url | replace: ' ', '%20' %}
+{% assign carousel_1 = '/1.jpg' | relative_url | replace: ' ', '%20' %}
+{% assign carousel_2 = '/2.png' | relative_url | replace: ' ', '%20' %}
 
 <section class="home-section home-section--about" id="home-about" aria-labelledby="home-about-heading">
   <div class="home-section__inner">
-    {% comment %} PROFILE PHOTO: change site.profile_image in _config.yml to point at your headshot file (site root). Do not use Logo.png. {% endcomment %}
+    {% comment %} PROFILE CAROUSEL: swap site.profile_image in _config.yml for your headshot. Slides cycle: portrait, 1.jpg, 2.png (see assets in site root). {% endcomment %}
     <div class="home-profile">
-      <img class="home-profile__photo" src="{{ site.profile_image | relative_url | replace: ' ', '%20' }}" alt="Portrait of Mario Cesar Bogado" width="280" height="280" loading="lazy" decoding="async">
+      <div class="home-profile__carousel" aria-label="Profile photos" role="region">
+        <img class="home-profile__slide is-active" src="{{ profile_url }}" alt="Portrait of Mario Cesar Bogado" width="280" height="280" decoding="async" fetchpriority="high">
+        <img class="home-profile__slide" src="{{ carousel_1 }}" alt="" width="280" height="280" loading="lazy" decoding="async">
+        <img class="home-profile__slide" src="{{ carousel_2 }}" alt="" width="280" height="280" loading="lazy" decoding="async">
+      </div>
       <div class="home-profile__text">
         <h2 class="home-section__title" id="home-about-heading">Mario Cesar Bogado — Financial Analyst</h2>
         <p class="home-profile__desc">Providing support in Valuations, M&amp;A operations, Investment Projects and Corporate Finance decisions.</p>
@@ -23,10 +30,17 @@
     <h2 class="home-section__title home-section__title--center" id="services-heading">Services</h2>
     <div class="service-grid">
       {% for s in site.data.home_services %}
+      {% if s.use_profile_photo %}
+        {% assign card_img = profile_url %}
+        {% assign img_face_class = ' service-card__image--face' %}
+      {% else %}
+        {% assign card_img = s.image | relative_url | replace: ' ', '%20' %}
+        {% assign img_face_class = '' %}
+      {% endif %}
       <article class="service-card">
         <a class="service-card__link" href="{{ s.path | relative_url }}">
           <div class="service-card__image-wrap">
-            <img class="service-card__image" src="{{ s.image | relative_url | replace: ' ', '%20' }}" alt="" loading="lazy" decoding="async">
+            <img class="service-card__image{{ img_face_class }}" src="{{ card_img }}" alt="" loading="lazy" decoding="async">
           </div>
           <h3 class="service-card__title">{{ s.title }}</h3>
         </a>

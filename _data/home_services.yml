@@ -1,10 +1,10 @@
-# Cover images live in site root (same filenames as in the repo). Titles link to existing .md pages.
+# Personal photo appears only where use_profile_photo: true (Investment Projects). All other cards use stock imagery.
 - title: Valuations
   image: "/1.jpg"
   path: /valuations
   description: "Discounted cash flow, trading comparables, and scenario analysis tailored to your business and reporting needs."
 - title: Due Diligence
-  image: "/2.png"
+  image: "/3.png"
   path: /ma
   description: "Financial and operational deep dives before acquisitions, divestitures, or major capital events to surface risks and value drivers."
 - title: Operational Finance
@@ -12,14 +12,14 @@
   path: /operative
   description: "Cash flow, working capital, and KPI dashboards that keep day-to-day decisions aligned with strategy."
 - title: Investment Projects
-  image: "/3.png"
+  use_profile_photo: true
   path: /corporate
   description: "Business cases, capital allocation, and prioritization for initiatives that move the needle on growth and returns."
 - title: M&A
-  image: "/4.jpg"
+  image: "/2.png"
   path: /ma
   description: "Buy-side and sell-side support, from target screening and valuation to negotiation and closing."
 - title: Corporate Finance
-  image: "/Gemini_Generated 1.png"
+  image: "/4.jpg"
   path: /corporate
   description: "Capital structure, financing strategy, and financial planning aligned with your objectives and constraints."
