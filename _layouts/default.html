@@ -52,10 +52,8 @@
 </nav>
 
 <script>
-  const toggle = document.querySelector('.navbar-toggle');
-  const menu = document.querySelector('.navbar-menu');
-  toggle.addEventListener('click', function() {
-    menu.classList.toggle('is-open');
+  document.querySelector('.navbar-toggle').addEventListener('click', function() {
+    document.querySelector('.navbar-menu').classList.toggle('is-open');
   });
 </script>
 
